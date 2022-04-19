@@ -26,39 +26,7 @@
 </style>
 </head>
 
-<?php
-include("config/config.php");
 
-
-$con = new classConnection();
-$con->getOpenCon();
-
- 
- 
- date_default_timezone_set("Asia/Bangkok");
- $time = date("Y-m-d");
- 
-
-
-$date = date("Y-m-d");
-$day = date('D', strtotime($date));
-$dayList = array(
-    'Sun' => 'Minggu',
-    'Mon' => 'Senin',
-    'Tue' => 'Selasa',
-    'Wed' => 'Rabu',
-    'Thu' => 'Kamis',
-    'Fri' => 'Jumat',
-    'Sat' => 'Sabtu'
-);
-
-$BulanIndo = array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
-$tahun = substr($date, 0, 4);
-$bulan = substr($date, 5, 2);
-$tgl   = substr($date, 8, 2);
-$tanggal = $dayList[$day] . ", " . $tgl . " " . $BulanIndo[(int)$bulan-1] . " ". $tahun;
-
-?>
 <body>
 
 
